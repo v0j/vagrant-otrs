@@ -28,5 +28,6 @@ sudo perl -cw /opt/otrs/bin/cgi-bin/index.pl
 sudo perl -cw /opt/otrs/bin/cgi-bin/customer.pl
 sudo perl -cw /opt/otrs/bin/otrs.PostMaster.pl
 bin/otrs.SetPermissions.pl --web-group=www-data
-sudo cp /opt/otrs/scripts/apache2-httpd.include.conf /etc/apache2/conf.d/otrs.conf
+sudo cp /opt/otrs/scripts/apache2-httpd.include.conf /etc/apache2/sites-available/otrs.conf
+sudo a2ensite otrs.conf
 sudo service apache2 restart
